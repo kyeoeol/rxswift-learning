@@ -8,8 +8,8 @@
 
 source가 되는 Observable 중 하나에 의해 item이 방출되면 지정된 함수를 통해 각 Observable이 보낸 최신 item을 결합해 방출한다. <br>
 * **Zip 연산자(operator)와의 차이점**
-  * Zip은 source가 되는 Observable이 모두 item을 방출할 때 방출된 item을 결합해 방출한다.
-  * CombineLatest는 source가 되는 Observable이 item을 방출할 때마다 방출된 item을 결합해 방출한다.
+  * Zip은 source가 되는 Observable이 모두 item을 방출할 때 방출된 item을 모두 결합해 방출한다.
+  * CombineLatest는 source가 되는 Observable이 item을 방출할 때마다 각 Observable의 최신 item을 결합해 방출한다.
 
 ```swift
 /// Example
