@@ -21,3 +21,18 @@ let passwordValid = passwordOutlet.rx.text.orEmpty
 
 let combineValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 } /// True or False
 ```
+
+<br>
+
+## Share
+Observable은 Subscribe될 때마다 새로운 Observable을 생성한다. <br>
+만약 API 요청에 대한 결과를 Subscribe하는 작업을 여러 가지 하게 된다면, 작업의 개수만큼 Observable이 생성될 것이다. (작업의 개수만큼 API를 호출하게 될 것이다.)
+
+이때, **Share**을 사용한다면 새로운 Observable 시퀀스가 생성되지 않고, 하나의 시퀀스에서 방출되는 아이템을 공유해 사용할 수 있다.
+
+### replay
+share(replay:)에서 replay에 입력하는 파라미터는 버퍼의 크기를 의미한다.
+다른 시퀀스에서 share()된 Observable을 구독했을 때, 입력된 버퍼의 크기만큼 새로운 시퀀스에 전달한다. <br>
+***
+cf. <br>
+https://jusung.github.io/shareReplay/
