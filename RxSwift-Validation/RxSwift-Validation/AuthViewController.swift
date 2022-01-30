@@ -25,7 +25,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureValidLabel()
+        configureViews()
         bind()
     }
     
@@ -87,7 +87,7 @@ private extension AuthViewController {
 
 // MARK: - Configure
 private extension AuthViewController {
-    func configureValidLabel() {
+    func configureViews() {
         usernameValidLabel.text = "5자 이상의 username만 사용 가능합니다."
         passwordValidLabel.text = "8자 이상의 password만 사용 가능합니다."
         
