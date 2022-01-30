@@ -1,2 +1,1 @@
-# RxSwift Example
-RxSwift Example or Practice : )
+# RxSwift Example or Practice : )
