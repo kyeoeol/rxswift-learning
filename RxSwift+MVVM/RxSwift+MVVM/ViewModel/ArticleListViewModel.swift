@@ -24,14 +24,15 @@ class ArticleListViewModel {
     
     func fetchData() {
         provider.rx.request(.getArticles)
-            .map(
-                ArticleList.self,
-                using: JSONDecoder(),
-                failsOnEmptyData: false
-            )
-            .map { $0.articles }
+            .filterSuccessfulStatusCodes()
+            .map(ArticleList.self)
+            .map(\.articles)
             .asObservable()
-            .subscribe(articles)
+            .subscribe(onNext: { communityList in
+                self.articles.onNext(communityList)
+            }, onError: { error in
+                print("--->ERROR:", error)
+            })
             .disposed(by: disposeBag)
     }
 }
