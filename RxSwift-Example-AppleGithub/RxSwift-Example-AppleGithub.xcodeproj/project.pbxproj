@@ -16,6 +16,8 @@
 		80A22012284B957300090E70 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A22011284B957300090E70 /* MainListViewController.swift */; };
 		80A22014284B960100090E70 /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A22013284B960100090E70 /* MainListCell.swift */; };
 		80A22017284B963900090E70 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80A22016284B963900090E70 /* SnapKit */; };
+		80A2201A284B99BB00090E70 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A22019284B99BB00090E70 /* Repository.swift */; };
+		80A2201D284B9AA900090E70 /* AppleRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2201C284B9AA900090E70 /* AppleRepositoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		80A21FD4284B8E7100090E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A22011284B957300090E70 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		80A22013284B960100090E70 /* MainListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
+		80A22019284B99BB00090E70 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		80A2201C284B9AA900090E70 /* AppleRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepositoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				80A21FDA284B8F6600090E70 /* App */,
+				80A2201B284B9A9400090E70 /* Service */,
+				80A22018284B99B700090E70 /* Model */,
 				80A22010284B952900090E70 /* View */,
 				80A21FCF284B8E7100090E70 /* Assets.xcassets */,
 				80A21FD1284B8E7100090E70 /* LaunchScreen.storyboard */,
@@ -87,6 +93,22 @@
 				80A22013284B960100090E70 /* MainListCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		80A22018284B99B700090E70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80A22019284B99BB00090E70 /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80A2201B284B9A9400090E70 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				80A2201C284B9AA900090E70 /* AppleRepositoryService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +192,8 @@
 			files = (
 				80A22012284B957300090E70 /* MainListViewController.swift in Sources */,
 				80A21FC7284B8E6D00090E70 /* AppDelegate.swift in Sources */,
+				80A2201D284B9AA900090E70 /* AppleRepositoryService.swift in Sources */,
+				80A2201A284B99BB00090E70 /* Repository.swift in Sources */,
 				80A22014284B960100090E70 /* MainListCell.swift in Sources */,
 				80A21FC9284B8E6D00090E70 /* SceneDelegate.swift in Sources */,
 			);
