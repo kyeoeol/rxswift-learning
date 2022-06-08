@@ -28,11 +28,7 @@ class ArticleListViewModel {
             .map(ArticleList.self)
             .map(\.articles)
             .asObservable()
-            .subscribe(onNext: { communityList in
-                self.articles.onNext(communityList)
-            }, onError: { error in
-                print("--->ERROR:", error)
-            })
+            .bind(to: articles)
             .disposed(by: disposeBag)
     }
 }
